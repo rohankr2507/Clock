@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@600&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+    background: linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 98.6%);
+}
+
+.clock {
+    width: 600px;
+    height: 300px;
+    background-color: transparent;
+    /* border: 2px solid black; */
+    border-radius: 10%;
+    box-shadow: 4px 6px 20px #E26EE5, -4px -6px 20px #E26EE5;
+    z-index: +5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ball {
+    width: 17rem;
+    height: 17rem;
+    border-radius: 50%;
+    z-index: +3;
+    position: absolute;
+    filter: blur(8px);
+}
+
+#ball1 {
+    background-color: #A6F6FF;
+    top: 48.5rem;
+    left: 36rem;
+    animation: ball1 2s ease-in-out 1s infinite alternate;
+}
+
+#ball2 {
+    background-color: #A6FF96;
+    top: 0rem;
+    right: 36rem;
+    animation: ball2 2s ease-in-out 1s infinite alternate;
+}
+
+@keyframes ball1 {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-45rem);
+    }
+}
+
+@keyframes ball2 {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(45rem);
+    }
+}
+
+#timeDisplay {
+    font-size: 6rem;
+    text-align: center;
+    font-weight: bolder;
+    font-family: 'Mukta', sans-serif;
+    /* z-index: +5; */
+    color: white;
+    position: relative;
+    top: -1rem;
+    left: 5rem;
+}
+
+#day {
+    font-size: 3rem;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Mukta', sans-serif;
+    /* z-index: +5; */
+    color: white;
+    position: relative;
+    top: 4rem;
+    right: 10.5rem;
+}
